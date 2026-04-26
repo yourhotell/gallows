@@ -11,7 +11,7 @@ inline int GenerateIDWith(int count_with)
 
 void PrintField(char mas_with[], int N, int hp)
 {
-    cout << "Ó Âàñ îñòàëîñü: " << hp << " æèçíåé" << endl;
+    cout << "Ð£ Ð’Ð°Ñ Ð¾ÑÑ‚Ð°Ð»Ð¾ÑÑŒ: " << hp << " Ð¶Ð¸Ð·Ð½ÐµÐ¹" << endl;
     for(int i = 0; i < N; i++)
     {
         cout << mas_with[i] << " ";
@@ -20,7 +20,7 @@ void PrintField(char mas_with[], int N, int hp)
 }
 
 void SetNewLetter (char* letter) {
-    cout << "Ââåäèòå áóêâó: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±ÑƒÐºÐ²Ñƒ: ";
     cin >> *letter;
 }
 
@@ -48,18 +48,12 @@ int main()
 
     index_with = GenerateIDWith(count_with);
 
-    //cout << index_with << endl;
-
-    //cout << mas[index_with] << endl;
-
-    //cout << mas[index_with].length() << endl;
-
     char *mas_with = new char [mas[index_with].length()];
 
 
     SetFiledNull(mas_with, mas[index_with].length());
 
-    cout << "Ïðèâåòñâóåì Âàñ â èãðå \"Âèñåëèöà\"!\nÂ ýòîé èãðå Âû äîëæíû ââîäèòü ïî îäíîé áóêâå, ïûòàÿñü óãàäàòü ñëîâî.\nÓ Âàñ âñåãî " << hp << " æèçíåé, ñ êàæäîé íåóãàäàííîé áóêâîé - îòíèìàåòñÿ 1 æèçíü." << endl;
+    cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÐ²ÑƒÐµÐ¼ Ð’Ð°Ñ Ð² Ð¸Ð³Ñ€Ðµ \"Ð’Ð¸ÑÐµÐ»Ð¸Ñ†Ð°\"!\nÐ’ ÑÑ‚Ð¾Ð¹ Ð¸Ð³Ñ€Ðµ Ð’Ñ‹ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ Ð²Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ Ð¿Ð¾ Ð¾Ð´Ð½Ð¾Ð¹ Ð±ÑƒÐºÐ²Ðµ, Ð¿Ñ‹Ñ‚Ð°ÑÑÑŒ ÑƒÐ³Ð°Ð´Ð°Ñ‚ÑŒ ÑÐ»Ð¾Ð²Ð¾.\nÐ£ Ð’Ð°Ñ Ð²ÑÐµÐ³Ð¾ " << hp << " Ð¶Ð¸Ð·Ð½ÐµÐ¹, Ñ ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð½ÐµÑƒÐ³Ð°Ð´Ð°Ð½Ð½Ð¾Ð¹ Ð±ÑƒÐºÐ²Ð¾Ð¹ - Ð¾Ñ‚Ð½Ð¸Ð¼Ð°ÐµÑ‚ÑÑ 1 Ð¶Ð¸Ð·Ð½ÑŒ." << endl;
 
     system("pause");
     system("cls");
@@ -93,13 +87,13 @@ int main()
         if(status) {
             ug++;
             system("cls");
-            cout << "Áóêâà íàéäåíà!" << endl;
+            cout << "Ð‘ÑƒÐºÐ²Ð° Ð½Ð°Ð¹Ð´ÐµÐ½Ð°!" << endl;
             PrintField(mas_with, mas[index_with].length(), hp);
         }
         else
         {
             system("cls");
-            cout << "Áóêâà íå íàéäåíà!" << endl;
+            cout << "Ð‘ÑƒÐºÐ²Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°!" << endl;
             hp--;
             PrintField(mas_with, mas[index_with].length(), hp);
         }
@@ -107,14 +101,14 @@ int main()
         if(hp == 0)
         {
             system("cls");
-            cout << "Âû ïðîèãðàëè!";
+            cout << "Ð’Ñ‹ Ð¿Ñ€Ð¾Ð¸Ð³Ñ€Ð°Ð»Ð¸!";
             return 1;
         }
 
         if(ug == mas[index_with].length())
         {
             system("cls");
-            cout << "Âû óãàäàëè ñëîâî - " << mas[index_with];
+            cout << "Ð’Ñ‹ ÑƒÐ³Ð°Ð´Ð°Ð»Ð¸ ÑÐ»Ð¾Ð²Ð¾ - " << mas[index_with];
             break;
         }
     }
